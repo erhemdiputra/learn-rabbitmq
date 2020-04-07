@@ -24,6 +24,13 @@
 4. Routing
 - 'Direct' Exchange: a message goes to the queues whose binding key exactly matches the routing key of the message.
 
+---
+
+5. Topics
+- Messages sent to a topic exchange can't have an arbitrary routing_key.
+It must be a list of words, delimited by dots. The words can be anything, 
+but usually they specify some features connected to the message. 
+A few valid routing key examples: "stock.usd.nyse", "nyse.vmw", "quick.orange.rabbit".
 
 
 
