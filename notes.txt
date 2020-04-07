@@ -1,0 +1,29 @@
+1. RabbitMQ Command
+- Running RabbitMQ: rabbitmq-server
+- Stop RabbitMQ: rabbitmqctl stop
+- Get Status RabbitMQ: rabbitmqctl status
+
+---
+
+2. Work Queues
+- Work Queues using 'Round-robin dispatching'
+- 'ack' parameter (acknowledgement) send back from consumer, to tell RabbitMQ has been received.
+- debug 'forgotten acknowledgement': sudo rabbitmqctl list_queues name messages_ready messages_unacknowledged
+- 'durable' parameter make sure the queue will survive when RabbitMQ node restart. Queues and messages are safe.
+
+---
+
+3. Publish/Subscribe
+- Producer -> Exchange -> Queue -> consumer
+- Exchange type: direct, topic, headers, fanout
+- Command to see list exchange: sudo rabbitmqctl list_exchanges
+- Relationship between exchange and a queue is called 'Binding'
+
+---
+
+4. Routing
+- 'Direct' Exchange: a message goes to the queues whose binding key exactly matches the routing key of the message.
+
+
+
+
